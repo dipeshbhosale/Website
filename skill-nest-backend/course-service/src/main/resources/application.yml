@@ -1,0 +1,20 @@
+server:
+  port: ${COURSE_SERVICE_PORT:8082}
+
+spring:
+  application:
+    name: course-service
+
+firebase:
+  service-account-path: ${FIREBASE_SERVICE_ACCOUNT_PATH:../config/firebase-service-account.json}
+  project-id: ${FIREBASE_PROJECT_ID:skill-nest-dccb0}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.skillnest: DEBUG

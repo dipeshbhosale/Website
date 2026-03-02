@@ -1,0 +1,20 @@
+server:
+  port: ${CALENDAR_SERVICE_PORT:8085}
+
+spring:
+  application:
+    name: calendar-service
+
+firebase:
+  service-account-path: ${FIREBASE_SERVICE_ACCOUNT_PATH:../config/firebase-service-account.json}
+  project-id: ${FIREBASE_PROJECT_ID:skill-nest-dccb0}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.skillnest: DEBUG
